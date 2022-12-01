@@ -1,0 +1,319 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&family=Noto+Sans+KR:wght@300;400;500;700&display=swap');
+
+
+/* font-family: 'Dancing Script', cursive;
+font-family: 'Noto Sans KR', sans-serif; */
+
+/* font-family: 'Handel Gothic'; */
+
+/* ------레이아웃 세팅------ */
+
+h1,h2,h3,h4,h5,h6 {
+    font-weight: 700;
+    font-size: inherit;
+  }
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    /* color: #fff; */
+}
+
+body {}
+
+
+.clearfix {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.main {
+
+    width: 100vw;
+    height: 100vh;
+}
+
+.main .slider {}
+
+.main .slider .slick-slide {
+    display: flex;
+    overflow: hidden;
+}
+
+.left_area {
+    width: 50%;
+    height: 100vh;
+    position: relative;
+}
+
+
+.right_area {
+    position: relative;
+    width: 50%;
+    height: 100vh;
+
+}
+
+/* slick 버튼 */
+
+
+.main .slider .slick-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    visibility: hidden;
+    font-size: 0;
+}
+
+.main .slider .slick-prev {
+    left: 5%;
+    z-index: 1;
+}
+
+.main .slider .slick-prev:after {
+    content: "\f053";
+    font-family: "Font Awesome 5 free";
+    font-weight: 900;
+    visibility: visible;
+    color: #22577E;
+    font-size: 50px;
+}
+
+.main .slider .slick-next {
+    right: 5%;
+    z-index: 1;
+}
+
+.main .slider .slick-next:after {
+    content: "\f054";
+    font-family: "Font Awesome 5 free";
+    font-weight: 900;
+    visibility: visible;
+    color: #22577E;
+    font-size: 50px;
+}
+
+.sec4 {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+
+    overflow: hidden;
+}
+
+/* [ left_area ] */
+
+.left_area h2.title {
+    position: absolute;
+    font-size: 5vw;
+    left: 20vh;
+    padding: 5vh 0px;
+    top: 10%;
+    color: #7FBCD2;
+}
+
+.slick-active .left_area h2.title {
+    animation: fadeInR 0.5s 0.5s both;
+}
+
+
+@keyframes fadeInR {
+    0% {
+        transform: translateX(150%);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.left_area .hash {
+    position: absolute;
+    top: 16%;
+    left: 7vw;
+    color: #FFD57E;
+    font-size: 30px;
+    transform: rotate(-10deg);
+}
+
+.slick-active .left_area .hash {
+    animation: fadeInT_ro 0.5s 1s both;
+}
+
+
+@keyframes fadeInT_ro {
+    0% {
+        transform: translateY(-150%) rotate(-10deg);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0) rotate(-10deg);
+        opacity: 1;
+    }
+}
+
+.left_area .text {
+    position: absolute;
+    font-size: 20px;
+    line-height: 1.5;
+    top: 60%;
+    left: 20%;
+    color: #888;
+}
+
+.slick-active .left_area .text {
+    animation: fadeIn 0.5s 0.5s both;
+}
+
+@keyframes fadeIn {
+    0% {
+        transform: scale(0);
+        opacity: 0;
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.left_area .link {
+    color: #3667A6;
+    font-size: 20px;
+    display: inline-block;
+    padding: 20px 0;
+    top: 45%;
+    position: relative;
+    left: 20%;
+    cursor: auto;    
+}
+
+.slick-active .left_area .link {
+    animation: fadeInL 0.5s 0.9s both;
+}
+
+@keyframes fadeInL {
+    0% {
+        transform: translateX(-150%);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.left_area .link:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 3px;
+    background: #7FBCD2;
+}
+
+.left_area .link:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0%;
+    height: 3px;
+    background: #22577E;
+    transition: 0.3s;
+}
+
+.left_area .link:hover:after {
+    width: 100%;
+}
+
+/* [ right_area ] */
+
+.right_area {
+    position: relative;
+}
+
+.video1 {
+
+    position: absolute;
+    left: 12%;
+    top: 30%;
+}
+
+.video2 {
+
+    position: absolute;
+    left: 12%;
+    top: 30%;
+}
+
+.video3 {
+
+    position: absolute;
+    left: 12%;
+    top: 30%;
+}
+
+.video4 {
+
+    position: absolute;
+    left: 12%;
+    top: 30%;
+}
+
+
+.sec4 .circleBox {
+    width: 850px;
+    position: absolute;
+    left: 8%;
+    top: 3%;
+    z-index: -2;
+    
+}
+
+
+.right_area .pattern {}
+
+.right_area .pattern img {
+    display: block;
+    position: relative;
+    width: 100%;
+    height: 630px;
+    top: 100px;
+    z-index: -2;
+    transform: rotate(-30deg);
+    left: 8%;
+    opacity: 0.8;
+}
+
+.slick-active .right_area .pattern img {
+    animation: fadeIn_ro 0.5s 0.8s both;
+}
+
+
+@keyframes fadeIn_ro {
+    0% {
+        transform: scale(0) rotate(-30deg);
+        opacity: 0;
+    }
+
+    100% {
+        transform: scale(1) rotate(-30deg);
+        opacity: 1;
+    }
+}
